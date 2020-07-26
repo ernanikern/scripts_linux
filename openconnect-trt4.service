@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenConnect para TRT4
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/openconnect-trt4
+PIDFile=/run/openconnect-trt4.pid
+Restart=on-failuer
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# echo 'muQu1f0!'|\
+sudo /usr/sbin/openconnect -v -b --pid-file=/run/openconnect-trt4.pid --cafile=/etc/ssl/certs/ciscoasa-TRT4.crt --authgroup infra -u 'esk' --passwd-on-stdin 186.251.63.249 --servercert sha256:3f64a8b0ac2fc38143f30d57630770c0e328a9663abf3018f935d041ebe4a117
