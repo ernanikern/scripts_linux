@@ -1,6 +1,8 @@
 #!/bin/bash
 
-rm filesystem27jul2020.csv
+data=`date +%d%b%Y`
 
-find /home/g1* -printf "%f;%Ab%AY;%k \n" >> filesystem27jul2020.csv
+touch filesystem"$data".csv
+
+find /home/g1* -printf "%f;%Ab%AY;%k \n" >> filesystem"$data".csv
 
