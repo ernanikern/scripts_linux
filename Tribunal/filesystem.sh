@@ -5,7 +5,7 @@ file="filesystem_$host.csv"
 rm "$file"
 
 #find /home/g1*/textos/ -printf "%f;%Ab%AY;%k \n" >> "$file"
-find /home/g1*/textos/ -printf "%f;%AY-%Am-%Ad;%k \n" >> "$file"
+find /home/g1*/textos/ -printf "%f/%AY-%Am-%Ad/%k \n" | grep -v "textos//" >> "$file"
 
 # %f - nome do arquivo sem o caminho completo
 # %AY-%Am-%Ad - data de último acesso do arquivo (%A), no formato YYYY-mm-dd
