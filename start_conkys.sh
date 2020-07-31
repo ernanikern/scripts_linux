@@ -1,5 +1,7 @@
 #!/bin/bash
 
+killall conky
+
 conky_dir="/home/ernani/.conky"
 
 file1="2monit-right.conkyrc"
