@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## SCRIPT NÃO USADO AINDA
+
 # LISTA OS DISPOSITIVOS DE SAÍDA, MANTÉM APENAS O HDMI E BLUETOOTH, E DETECTA QUAL ESTÁ SEM USO (SUSPENDED):
 
 ativar=`pactl list short sinks | egrep "hdmi|blue" | grep SUSPENDED | awk '{print $1, $2}'`
