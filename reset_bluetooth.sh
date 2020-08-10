@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 5 #aguarda 5 segundos para executar
+
 id=`rfkill | grep bluetooth | awk '{print $1}'`
 # echo "id = $id"
 
