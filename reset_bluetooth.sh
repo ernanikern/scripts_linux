@@ -2,13 +2,19 @@
 
 sleep 5 #aguarda 5 segundos para executar
 
-id=`rfkill | grep bluetooth | awk '{print $1}'`
-# echo "id = $id"
+state=`bluetoothctl show | grep Powered | awk '{print $2}'`
+echo "state = $state"
 
-rfkill block "$id"
-#echo "Bloqueando..."
-#echo `rfkill`
+while [ "$state" != "yes" ]
+do
+  id=`rfkill | grep bluetooth | awk '{print $1}'`
+  # echo "id = $id"
 
-rfkill unblock "$id"
-#echo "Desbloqueando..."
-#echo `rfkill`
+  rfkill block "$id"
+  #echo "Bloqueando..."
+  #echo `rfkill`
+
+  rfkill unblock "$id"
+  #echo "Desbloqueando..."
+  #echo `rfkill`
+done
