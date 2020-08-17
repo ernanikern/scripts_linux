@@ -31,7 +31,7 @@ do
 
   ((count++))
   echo "count = $count"
-  if [ "$count" -eq 10 ]; then
+  if [ "$count" -eq 5 ]; then
     exit
   fi
 done
