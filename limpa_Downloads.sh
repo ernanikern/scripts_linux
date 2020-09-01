@@ -2,4 +2,4 @@
 
 dir="/home/ernani/Downloads/"
 
-find "$dir" -atime +60 -exec rm -rf {} \;
+find "$dir" -atime +30 -exec rm -rf {} \;
