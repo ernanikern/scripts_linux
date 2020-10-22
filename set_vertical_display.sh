@@ -8,4 +8,4 @@ killall conky
 
 start_conkys.sh
 
-wmctrl -c 'Monitores'
+wmctrl -F c 'Monitores'
