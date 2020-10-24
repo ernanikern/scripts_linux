@@ -9,3 +9,5 @@ killall conky
 start_conkys.sh
 
 wmctrl -F c 'Monitores'
+sudo wmctrl -c Monitores
+wmctrl -c Monitores
