@@ -2,11 +2,11 @@
 
 # SCRIPT RODANDO EM /usr/local/bin/
 
-if [ $# -eq 0 ]
+if [ $# -lt 2 ]
    then
-      echo "Informe o servidor a conectar <<<<<<<<<"
+      echo "Informe o 1. usuário e2. servidor a conectar <<<<<<<<<"
    else
-      xfreerdp /u:esk@trt +clipboard /w:1300 /h:900 /v:$1
+      xfreerdp /u:$1@trt +clipboard /w:1300 /h:900 /v:$2
 fi
 
 ## Parâmetros extras: 

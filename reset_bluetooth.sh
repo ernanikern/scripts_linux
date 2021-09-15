@@ -12,7 +12,13 @@
 #while [ "$state" != "yes" ]
 #do
 #  sudo systemctl kill bluetooth
-  sudo systemctl restart bluetooth
+  sudo bluetoothctl power off
+  sudo systemctl stop bluetooth
+  sudo rfkill block bluetooth
+  sleep 3
+  sudo rfkill unblock bluetooth
+  sudo systemctl start bluetooth
+  sudo bluetoothctl power on
 #  echo "Matou bluetooth..."
 #  sudo systemctl kill systemd-rfkill
 
@@ -20,14 +26,14 @@
 #  echo "Iniciando bluetooth..."
 #  sudo systemctl start systemd-rfkill
 
-  id=`rfkill | grep bluetooth | awk '{print $1}'`
+#  id=`rfkill | grep bluetooth | awk '{print $1}'`
 #  echo "id = $id"
 
-  rfkill block "$id"
+#  rfkill block "$id"
 #  echo "Bloqueando $id..."
 #  echo `rfkill`
 
-  rfkill unblock "$id"
+#  rfkill unblock "$id"
 #  echo "Desbloqueando $id..."
 #  echo `rfkill`
 

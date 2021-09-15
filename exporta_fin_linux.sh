@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ernani/Dropbox/financeiro/
+cd /mnt/storage/Dropbox/financeiro/
 
 data=`date +%d%m%y_%H%M`
 
@@ -8,7 +8,7 @@ read -p "CONFIRMA A EXPORTACAO? " -n 1
 if [[ $REPLY = "s" ]]
 then
 	echo "   "
-	`mysqldump -uernani -pkrq6XY financeiro -v -R -r fin_"$data".sql`
+	`mysqldump -uernani -pkern33nani financeiro -v -R -r fin_"$data".sql`
 	ls -l fin_"$data".sql
 
 #	touch exporta_fin_linux.sh 
